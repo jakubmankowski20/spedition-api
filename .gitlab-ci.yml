@@ -1,0 +1,7 @@
+production:
+  type: deploy
+  script:
+  - gem install dpl
+  - dpl --provider=heroku --app=spedition-app --api-key=$HEROKU_API_KEY
+  only:
+  - master
